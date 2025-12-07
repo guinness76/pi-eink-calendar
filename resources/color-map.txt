@@ -1,0 +1,8 @@
+YELLOW-CALENDAR=yellow
+RED-CALENDAR=red
+GREEN-CALENDAR=green
+ORANGE-CALENDAR=orange
+BLUE-CALENDAR=blue
+WHITE-CALENDAR=white
+BLACK-CALENDAR=black
+Holidays in United States=yellow
