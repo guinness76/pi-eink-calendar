@@ -2,11 +2,11 @@
 Installation instructions and source code for getting an e-ink event calendar running for a Raspberry Pi
 
 # Finished Product
-<img src="[https://github.com/favicon.ico](https://github.com/user-attachments/assets/5a4e1ab9-1da9-4311-8094-5de5399cf9c0)" width="400">
-![front1](https://github.com/user-attachments/assets/5a4e1ab9-1da9-4311-8094-5de5399cf9c0)
-![front2](https://github.com/user-attachments/assets/a2694de7-c5db-42c3-a661-2c473e5f1d0d)
-![back1](https://github.com/user-attachments/assets/b0024583-3b73-4eab-95fb-6cf073d724d9)
-![back2](https://github.com/user-attachments/assets/ea4f52f0-b893-48e8-88c8-0b600e4aa235)
+![front1](https://github.com/user-attachments/assets/adca96ce-c837-4162-b56c-7270bfad3698)
+![front2](https://github.com/user-attachments/assets/7b55d2d8-2cb4-46eb-9289-5a54b972ac5e)
+![back1](https://github.com/user-attachments/assets/0fffdcfd-8a18-4009-b83e-52ce387c2484)
+![back2](https://github.com/user-attachments/assets/e667f1e2-3bce-4b5b-a92e-fe576e699b9a)
+
 
 # Parts list
 - Waveshare ACeP 7-Color E-Paper E-Ink Display + ePaper HAT for Raspberry Pi
