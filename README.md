@@ -2,6 +2,7 @@
 Installation instructions and source code for getting an e-ink event calendar running for a Raspberry Pi
 
 # Finished Product
+<img src="[https://github.com/favicon.ico](https://github.com/user-attachments/assets/5a4e1ab9-1da9-4311-8094-5de5399cf9c0)" width="400">
 ![front1](https://github.com/user-attachments/assets/5a4e1ab9-1da9-4311-8094-5de5399cf9c0)
 ![front2](https://github.com/user-attachments/assets/a2694de7-c5db-42c3-a661-2c473e5f1d0d)
 ![back1](https://github.com/user-attachments/assets/b0024583-3b73-4eab-95fb-6cf073d724d9)
