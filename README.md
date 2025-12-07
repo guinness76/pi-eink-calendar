@@ -1,6 +1,12 @@
 # pi-calendar3
 Installation instructions and source code for getting an e-ink event calendar running for a Raspberry Pi
 
+# Finished Product
+![front1](https://github.com/user-attachments/assets/5a4e1ab9-1da9-4311-8094-5de5399cf9c0)
+![front2](https://github.com/user-attachments/assets/a2694de7-c5db-42c3-a661-2c473e5f1d0d)
+![back1](https://github.com/user-attachments/assets/b0024583-3b73-4eab-95fb-6cf073d724d9)
+![back2](https://github.com/user-attachments/assets/ea4f52f0-b893-48e8-88c8-0b600e4aa235)
+
 # Parts list
 - Waveshare ACeP 7-Color E-Paper E-Ink Display + ePaper HAT for Raspberry Pi
 https://www.waveshare.com/7.3inch-e-paper-hat-f.htm
