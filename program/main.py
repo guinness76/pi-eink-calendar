@@ -258,7 +258,7 @@ def getRealEvents():
                         if calendarTimeZone == "UTC":
                             if isDst:
                                 startDateTime = startDateTime + timedelta(hours=-7)
-                                endDateTime = endDateTime + timedelta(hour=-7)
+                                endDateTime = endDateTime + timedelta(hours=-7)
                             else:
                                 startDateTime = startDateTime + timedelta(hours=-8)
                                 endDateTime = endDateTime + timedelta(hours=-8)

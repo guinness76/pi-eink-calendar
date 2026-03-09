@@ -18,6 +18,14 @@ https://www.waveshare.com/7.3inch-e-paper-hat-f.htm
 
 - Standard 6x8 picture frame matted to 4x6. The e-ink display is slightly larger than 4x6 so you need a bit of extra room.
 
+# How it works
+The Waveshare e-ink display is designed to display images that are fed to it. Internally it uses the Python Image Library (PIL) to do this. main.py uses the ImageDraw module in the same PIL library to draw shapes and text onto an in-memory Image object, and then dispatches the Image object to the display. See https://pillow.readthedocs.io/en/stable/reference/Image.html for some great examples of how to use this library. You can even save the Image object to disk with a single command:
+```
+myImageObject.save("output.png", "PNG")
+```
+
+main.py does these things: fetch calendar events from the Google Calendar API, format those events into objects with customized date and time text, draw those objects onto an Image object, and then dispatch the finished Image to the display. 
+
 # Testing the display
 You can test the e-ink display using the library functions provided by Waveshare. This is a good start to make sure the e-ink display functions at all. See https://github.com/waveshareteam/e-Paper You can download the whole repository, but you only really need to care about the files in the `RaspberryPi_JetsonNano/python` folder. Within this folder is an `examples` folder. You can run `epd_7in3e_test.py`, `epd_7in3f_test.py` or `epd_7in3g_test.py`. They all use different images in their tests. Be aware that these programs run *very* slowly, due to the fact that the e-ink display takes so long to refresh. Expect the screen to flash 30+ times in different colors when running these programs. Also, the programs take a full minute to execute and show images.
 
