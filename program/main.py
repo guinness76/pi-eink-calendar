@@ -217,7 +217,6 @@ def getRealEvents():
             print("No calendars found")
             return
 
-
         for calendar in calendars:
             calendarName = calendar["summary"]
             if calendarName in EXCLUDE_LIST:
@@ -244,11 +243,16 @@ def getRealEvents():
                     endDateTimeStr = event["end"].get("dateTime")
 
                     allDay = None
+                    multidays = None
                     startDateTime = None
                     endDateTime = None
                     if startDateTimeStr is None:
                         allDay = datetime.fromisoformat(event["start"].get("date"))
                         allDay = allDay.date()
+                        # Note that the end date comes across as the day after the event
+                        allDayEnd = datetime.fromisoformat(event["end"].get("date"))
+                        delta = allDayEnd.date() - allDay
+                        multidays = delta.days
                     else:
                         startDateTime = datetime.fromisoformat(startDateTimeStr)
                         endDateTime = datetime.fromisoformat(endDateTimeStr)
@@ -263,13 +267,23 @@ def getRealEvents():
                                 startDateTime = startDateTime + timedelta(hours=-8)
                                 endDateTime = endDateTime + timedelta(hours=-8)
 
-                    piEvent = PiCalendarEvent(calendarName = calendar["summary"],
-                                                eventSummary = event["summary"],
+                    eventSummary = event["summary"]
+                    if (allDay is not None and multidays > 1):
+                        for i in range(0, multidays):
+                            multidayEvent = PiCalendarEvent(calendarName = calendar["summary"],
+                                                    eventSummary = eventSummary + " (day %d of %d)" % (i+1, multidays),
+                                                    allDayEventDate = allDay + timedelta(days=i),
+                                                    eventStartTime= startDateTime,
+                                                    eventEndTime = endDateTime)
+                            piEvents.append(multidayEvent)                      
+                    else:
+                        piEvent = PiCalendarEvent(calendarName = calendar["summary"],
+                                                eventSummary = eventSummary,
                                                 allDayEventDate = allDay,
                                                 eventStartTime= startDateTime,
                                                 eventEndTime = endDateTime)
-
-                    piEvents.append(piEvent)
+                    
+                        piEvents.append(piEvent)
     except HttpError as error:
         print(f"An HTTP occurred: {error}")
         exit(1)
